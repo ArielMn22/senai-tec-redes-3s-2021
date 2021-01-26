@@ -1,0 +1,82 @@
+Current configuration : 1042 bytes
+!
+! Last configuration change at 12:09:51 UTC Tue Jan 26 2021
+! NVRAM config last updated at 12:09:47 UTC Tue Jan 26 2021
+!
+version 15.0
+service timestamps debug datetime msec
+service timestamps log datetime msec
+no service password-encryption
+!
+hostname RT
+!
+boot-start-marker
+boot-end-marker
+!
+enable password Senai@132
+!
+aaa new-model
+!
+!
+aaa authentication login AUTH local
+!
+!
+!
+!
+!
+aaa session-id common
+!
+no ipv6 cef
+ip source-route
+ip cef
+!
+!
+!
+!
+multilink bundle-name authenticated
+!
+!
+!
+license udi pid CISCO1905BR/K9 sn TSP2238AJCB
+!
+!
+username admin password 0 Senai@132
+!
+!
+!
+!
+!
+!
+interface GigabitEthernet0/0
+ ip address 172.31.136.254 255.255.255.0
+ duplex auto
+ speed auto
+!
+interface GigabitEthernet0/1
+ no ip address
+ shutdown
+ duplex auto
+ speed auto
+!
+ip forward-protocol nd
+!
+no ip http server
+no ip http secure-server
+!
+!
+!
+!
+!
+control-plane
+!
+banner motd ^C
+##### CUIDADO: ACESSO SOMENTE A PESSOAS AUTORIZADAS #####
+^C
+!
+line con 0
+ login authentication AUTH
+line aux 0
+line vty 0 4
+!
+scheduler allocate 20000 1000
+end

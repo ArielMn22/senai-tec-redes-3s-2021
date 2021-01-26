@@ -1,0 +1,37 @@
+Anotações
+=========
+	- ;
+	
+Interface Console (Switches/Roteadores)
+=======================================
+	- Cabo Roll-over;
+		- Conector DB9;
+		
+Commands
+========
+	- devmgmt.msc - Abre o gerenciador de dispositivos;
+	- 9600-8-N-1-N - Configuração padrão da Cisco para visualização dos dados nos equipamentos;
+		- 9600 - Velocidade serial;
+		- 8 - Bytes por leva;
+		- N;
+		- 1;
+		- N;
+	- 115200B - Velocidade máxima da serial dos equipamentos Cisco;
+	
+	
+Procedimentos
+	- Router
+		- Hostnames	
+		- G0/0 IP
+		- MOTD
+		- Auth
+	- Switch 1
+		- Ether
+		- Hostnames
+		- MOTD
+		- Auth
+	- Switch 2
+		- Ether
+		- Hostnames
+		- MOTD
+		- Auth

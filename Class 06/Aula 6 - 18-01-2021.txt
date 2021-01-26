@@ -1,0 +1,55 @@
+Anotações da aula
+
+Passos
+
+Configuração de ambiente
+	- Servidor
+		- Importar OVA
+		- Configurar hostname
+		- Configurar placa de rede
+		- Configurar Switch LAN
+	- Cliente
+		- Importar OVA
+		- Configurar placa de rede
+		- Configurar Switch LAN
+
+Implementação de serviços
+	- DHCP
+		- Instalar pacotes
+		- Configurar arquivos
+			- /etc/dhcp/dhcpd.conf
+			- /etc/default/isc-dhcp-server
+		- Reiniciar serviço
+		- Testar serviço
+	- DNS
+		- Configurar servidor DNS - *melhores anotaçôes no Notion
+		- Reiniciar serviço
+		- Testar serviço
+	- APACHE2
+		- Configurar apache2
+		- Adicionar página HTML
+		- Reiniciar serviço
+		- Testar serviço
+		
+		
+Commands
+# hostnamectl set-hostname machine-name-here - SET PC HOSTNAME
+# vim /etc/network/interfaces - EDIT INTERFACES CONFIGURAIONS
+# isc-dhcp-server - Pacote utilizado para configurar o DHCP
+# service <SERVICE_NAME> restart - Reiniciar um serviço
+# rm -rf /var/run/dhcpd.pid - APAGAR ARQUIVO QUE ESTAVA DANDO ERRO DE PROCESS ID
+
+bind9, bind9-docs, dnsutils - PACOTES UTILIZADOS PARA CONFIGURAR O DNS
+
+Paths
+	- DHCP
+		- #vim /etc/dhcp/dhcpd.conf
+		- #vim /etc/default/isc-dhcp-server
+	- DNS
+		- #vim /etc/bind/named.conf.local
+		- #vim /etc/bind/db.<url>
+		- #vim /etc/resolv.conf
+		
+OBSERVAÇÕES
+	- Se atendar às definições de nomes e IPs pedidos;
+	
