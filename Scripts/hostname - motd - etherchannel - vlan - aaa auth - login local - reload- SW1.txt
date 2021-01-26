@@ -1,0 +1,46 @@
+enable
+configure terminal
+hostname SW1
+banner motd $
+###### CUIDADO: ACESSO SOMENTE A PESSOAS AUTORIZADAS ########$
+interface fastEthernet 0/24
+no shutdown
+interface range fastEthernet 0/10-11
+channel-group 1 mode active
+interface vlan 1
+ip address 172.31.136.253 255.255.255.0
+enable password Senai@132
+username admin password Senai@132
+aaa new-model
+aaa authentication login AUTH local
+line console 0
+login authentication AUTH
+do wr
+exit
+
+#RESETAR
+write erase
+wr
+reload
+
+
+========================================
+PACKET TRACER
+========================================
+enable
+configure terminal
+hostname SW1
+banner motd $
+###### CUIDADO: ACESSO SOMENTE A PESSOAS AUTORIZADAS ########$
+interface fastEthernet 0/24
+no shutdown
+interface range fastEthernet 0/10-11
+channel-group 1 mode active
+interface vlan 1
+ip address 172.31.136.253 255.255.255.0
+enable password Senai@132
+username admin password Senai@132
+line console 0
+login local
+do wr
+exit
