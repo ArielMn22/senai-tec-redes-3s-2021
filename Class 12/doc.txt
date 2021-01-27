@@ -1,0 +1,46 @@
+Documentação - 
+
+Ping - SENAI-PC1 para SENAI-PC2:
+C:\>ping 192.168.20.10
+
+Pinging 192.168.20.10 with 32 bytes of data:
+
+Reply from 192.168.20.10: bytes=32 time=11ms TTL=127
+Reply from 192.168.20.10: bytes=32 time=11ms TTL=127
+Reply from 192.168.20.10: bytes=32 time=14ms TTL=127
+Reply from 192.168.20.10: bytes=32 time<1ms TTL=127
+
+Ping statistics for 192.168.20.10:
+    Packets: Sent = 4, Received = 4, Lost = 0 (0% loss),
+Approximate round trip times in milli-seconds:
+    Minimum = 0ms, Maximum = 14ms, Average = 9ms
+
+Ping - SENAI-PC1 para SENAI-PC3:
+C:\>ping 192.168.30.20
+
+Pinging 192.168.30.20 with 32 bytes of data:
+
+Reply from 192.168.30.20: bytes=32 time=12ms TTL=127
+Reply from 192.168.30.20: bytes=32 time=11ms TTL=127
+Reply from 192.168.30.20: bytes=32 time=18ms TTL=127
+Reply from 192.168.30.20: bytes=32 time=14ms TTL=127
+
+Ping statistics for 192.168.30.20:
+    Packets: Sent = 4, Received = 4, Lost = 0 (0% loss),
+Approximate round trip times in milli-seconds:
+    Minimum = 11ms, Maximum = 18ms, Average = 13ms
+
+Ping - SENAI-PC2 para SENAI-PC1:
+C:\>ping 192.168.10.10
+
+Pinging 192.168.10.10 with 32 bytes of data:
+
+Reply from 192.168.10.10: bytes=32 time=12ms TTL=127
+Reply from 192.168.10.10: bytes=32 time=14ms TTL=127
+Reply from 192.168.10.10: bytes=32 time=13ms TTL=127
+Reply from 192.168.10.10: bytes=32 time=10ms TTL=127
+
+Ping statistics for 192.168.10.10:
+    Packets: Sent = 4, Received = 4, Lost = 0 (0% loss),
+Approximate round trip times in milli-seconds:
+    Minimum = 10ms, Maximum = 14ms, Average = 12ms
