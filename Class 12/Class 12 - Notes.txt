@@ -1,0 +1,1 @@
+Auto MDI - Suporta tanto cabos cross quanto cabos diretos.
