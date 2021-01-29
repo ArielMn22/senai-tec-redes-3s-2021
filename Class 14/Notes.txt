@@ -1,0 +1,1 @@
+Overlaping - Erro de sobreposição de rede - Erro no cálculo de VLSMshow ip interface brief - Mostra as interfaces e seus IPs associados
