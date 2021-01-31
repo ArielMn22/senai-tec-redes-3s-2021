@@ -1,0 +1,48 @@
+!Privileged mode
+enable
+clock set HH:MM:SS Dia Mês Ano
+!Example clock set 19:08:00 31 Jan 2021
+
+!Global configuration mode
+configure terminal
+
+clock timezone UTC-3 -3
+
+service timestamps log datetime msec
+service timestamps debug datetime msec
+service password-encryption
+
+no ip domain-lookup
+
+logging userinfo
+logging buffered "NUMERO"
+logging trap debugging
+logging console
+logging on
+
+banner motd "Equipamento de acesso restrito"
+
+enable secret Senai@132
+line con 0
+password Senai@132
+
+hostname SENAI-SW2
+
+interface vlan 1
+ip address 187.162.136.130 255.255.255.192
+no shutdown
+exit
+
+ip domain-name senai.lab
+crypto key generate rsa general-key modulus 1024
+ip ssh time-out 60
+ip ssh authentication-retries 2
+username senai priv 15 secret Senai@132
+line vty 0 4
+login local
+transport input ssh
+transport output ssh
+
+exit
+
+do wr
